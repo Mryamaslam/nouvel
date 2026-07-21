@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mryamaslam.github.io/nouvel/sitemap.xml

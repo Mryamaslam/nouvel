@@ -478,3 +478,95 @@ footer .logo, footer a.brand {
 @media (max-width: 900px) {
   .reviews-grid { grid-template-columns: 1fr !important; }
 }
+
+/* ---- Modern standards baseline ---- */
+:root {
+  --bg: #faf7f5;
+  --ink: #1c1917;
+  --muted: #57534e;
+  --line: #e7e5e4;
+  --pink: #fce7f3;
+  --focus: #9d174d;
+  --radius: 14px;
+}
+body { background: var(--bg); color: var(--ink); }
+.promo { background: #fce7f3; }
+.logo-mark { background: #1c1917 !important; }
+.btn, .btn-primary { border-radius: 999px; }
+
+
+/* ---- Modern standards baseline ---- */
+:focus-visible {
+  outline: 3px solid var(--focus, #2563eb);
+  outline-offset: 3px;
+}
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -48px;
+  z-index: 1000;
+  background: var(--focus, #111);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.skip-link:focus {
+  top: 12px;
+}
+img { height: auto; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal { opacity: 1 !important; transform: none !important; filter: none !important; }
+}
+.cookie-bar {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 90;
+  max-width: 720px;
+  margin: 0 auto;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(15,15,15,.94);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 16px 40px rgba(0,0,0,.25);
+  font-size: 14px;
+  line-height: 1.4;
+}
+.cookie-bar.show { display: flex; flex-wrap: wrap; }
+.cookie-bar a { color: #fff; text-decoration: underline; }
+.cookie-bar .btn { margin: 0; }
+.to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 80;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  display: none;
+  place-items: center;
+  font-weight: 800;
+  background: var(--focus, #111);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(0,0,0,.2);
+}
+.to-top.show { display: grid; }
+@media (max-width: 900px) {
+  .cookie-bar { left: 10px; right: 10px; bottom: 10px; }
+}
