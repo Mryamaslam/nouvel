@@ -362,59 +362,6 @@ a.btn-primary {
   .layout { grid-template-columns: 1fr !important; }
 }
 
-/* ---- Brand logo system ---- */
-/* ---- Brand logo system ---- */
-.logo, a.brand.logo, a.logo.brand {
-  display: inline-flex !important;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  line-height: 1.1;
-}
-.logo-mark {
-  width: 38px;
-  height: 38px;
-  flex-shrink: 0;
-  display: grid;
-  place-items: center;
-  border-radius: 11px;
-  position: relative;
-}
-.logo-mark svg {
-  width: 22px;
-  height: 22px;
-  display: block;
-}
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-weight: 800;
-  letter-spacing: -.02em;
-}
-.logo-text .word {
-  font-size: 1.05em;
-  line-height: 1;
-}
-.logo-text .tag {
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  margin-top: 3px;
-  opacity: .72;
-}
-footer .logo, footer a.brand {
-  text-align: left !important;
-}
-
-
-.logo-mark { background: #171717; color:#fff; border-radius: 50%; }
-.logo-text { text-align: left; }
-.logo-text .word { font-family: "Cormorant Garamond", Georgia, serif; font-size: 26px; font-weight: 700; color: #171717; text-transform: lowercase; }
-.logo-text .tag { font-family: Inter, sans-serif; letter-spacing: .18em; color: #525252; opacity: 1; }
-.logo { text-align: left !important; }
-.review-avatar { background: #fce7f3; color: #9d174d; }
 
 
 /* ---- Reviews section ---- */
@@ -570,3 +517,39 @@ img { height: auto; }
 @media (max-width: 900px) {
   .cookie-bar { left: 10px; right: 10px; bottom: 10px; }
 }
+
+/* ---- Brand logo system ---- */
+/* Nouvel logo — editorial serif + vertical rule (no icon) */
+.logo.logo-nouvel, .logo {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  text-align: left !important;
+}
+.logo-nouvel .logo-name {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  color: #1c1917;
+  letter-spacing: -.01em;
+  text-transform: lowercase;
+}
+.logo-nouvel .logo-vline {
+  width: 1px;
+  height: 28px;
+  background: #9d174d;
+  flex-shrink: 0;
+}
+.logo-nouvel .logo-side {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  color: #9d174d;
+  line-height: 1;
+}
+.logo-mark, .logo-text { display: none !important; }
