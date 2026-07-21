@@ -56,4 +56,16 @@
     var s=document.getElementById("formSuccess");if(s)s.classList.add("show");
     checkoutForm.style.display="none";
   });
+
+  document.querySelectorAll("#newsletterForm, .newsletter-form").forEach(function(nf){
+    nf.addEventListener("submit", function(e){
+      e.preventDefault();
+      var email = nf.querySelector('input[type="email"]');
+      if(!email || !email.value.trim()){ alert("Please enter your email."); return; }
+      nf.reset();
+      var note = nf.parentElement.querySelector(".nl-success");
+      if(note){ note.style.display="block"; } else { alert("Thanks — you're on the list."); }
+    });
+  });
+
 })();
