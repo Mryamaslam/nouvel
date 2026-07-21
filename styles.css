@@ -553,3 +553,21 @@ img { height: auto; }
   line-height: 1;
 }
 .logo-mark, .logo-text { display: none !important; }
+
+/* ---- Unique motion / section language ---- */
+/* Nouvel motion — editorial fade / soft rise */
+.reveal { opacity: 0; transform: translateY(18px); transition: 1s cubic-bezier(.22,1,.36,1); }
+.reveal.in { opacity: 1; transform: none; }
+.product { transition: transform .6s var(--ease); }
+.product img { transition: transform 1s var(--ease), opacity .6s; }
+.product:hover { transform: translateY(-6px); }
+.product:hover img { transform: scale(1.04); }
+.page-title { letter-spacing: -.02em; }
+.filter-chip { transition: background .25s, color .25s, transform .25s; }
+.filter-chip:hover { transform: translateY(-2px); }
+.filter-chip.active { background: #9d174d; border-color: #9d174d; }
+.cta { transition: box-shadow .4s, transform .4s; }
+.cta:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(157,23,77,.08); }
+.promo { animation: nvShimmer 6s linear infinite; background-size: 200% 100%;
+  background-image: linear-gradient(90deg,#fce7f3,#fff,#fce7f3); }
+@keyframes nvShimmer { to { background-position: -200% 0; } }
