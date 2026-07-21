@@ -1,14 +1,38 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Nouvel | Everyday Essentials</title><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/><link rel="stylesheet" href="styles.css"/></head><body>
-<div class="topbar">Nouvel · Soft essentials for every day</div><div class="promo">Free mini pouch with orders over $85</div>
-<header><div class="wrap nav"><div class="left"><a href="shop.html">New</a><a href="fit.html">Find your fit</a></div>
+<div class="topbar">Nouvel · Soft essentials for every day</div>
+<div class="promo">Free mini pouch with orders over $85</div>
+<header><div class="wrap nav">
+<div class="left"><a href="shop.html?cat=new">New</a><a href="fit.html">Find your fit</a></div>
 <a class="logo" href="index.html">nouvel<span>ESSENTIALS</span></a>
-<div class="right"><a href="shop.html">Search</a><a href="contact.html">Account</a><a href="cart.html">Bag <span data-cart-count>0</span></a></div>
-</div><nav class="wrap menu"><a href="shop.html">New</a><a class="active" href="shop.html">Best Sellers</a><a href="shop.html">Essentials</a><a href="shop.html">Sets</a><a href="shop.html">Sale</a><a href="fit.html">Find Your Fit</a></nav></header>
+<div class="right">
+<button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+<a href="shop.html">Shop</a><a href="contact.html">Help</a><a href="cart.html">Bag <span data-cart-count>0</span></a>
+</div>
+</div>
+<nav class="wrap menu" id="navLinks">
+<a href="shop.html?cat=new">New</a>
+<a href="shop.html?cat=bestsellers" class="active">Best Sellers</a>
+<a href="shop.html?cat=essentials">Essentials</a>
+<a href="shop.html?cat=sets">Sets</a>
+<a href="shop.html?cat=sale">Sale</a>
+<a href="fit.html">Find Your Fit</a>
+</nav>
+<div class="wrap mobile-cats" id="mobileCats">
+<a href="shop.html?cat=new">New</a>
+<a href="shop.html?cat=bestsellers">Best Sellers</a>
+<a href="shop.html?cat=essentials">Essentials</a>
+<a href="shop.html?cat=sets">Sets</a>
+<a href="shop.html?cat=sale">Sale</a>
+<a href="fit.html">Find Your Fit</a>
+<a href="cart.html">Bag</a>
+<a href="contact.html">Help</a>
+</div>
+</header>
 <section class="hero" style="background-image:url('images/hero.jpg')"><div class="wrap">
 <h1>soft essentials, elevated</h1>
 <p style="margin:10px 0 18px;max-width:36ch">Everyday pieces designed for comfort that still looks considered.</p>
-<a class="btn" href="shop.html">Shop best sellers</a>
+<a class="btn" href="shop.html?cat=bestsellers">Shop best sellers</a>
 </div></section>
 <main class="page wrap">
 <div class="stats-strip reveal" style="margin:8px 0 40px">
@@ -19,10 +43,42 @@
 </div>
 <p class="crumb">home / best sellers</p>
 <h1 class="page-title">best sellers</h1>
+<div class="filter-chip-row">
+<button type="button" class="filter-chip active" data-cat="all">All</button>
+<button type="button" class="filter-chip" data-cat="bestsellers">Best sellers</button>
+<button type="button" class="filter-chip" data-cat="essentials">Essentials</button>
+<button type="button" class="filter-chip" data-cat="sets">Sets</button>
+<button type="button" class="filter-chip" data-cat="sale">Sale</button>
+<button type="button" class="filter-chip" data-cat="new">New</button>
+</div>
 <div class="layout">
-<aside class="filters"><h2>filters</h2><button type="button">fit <span>+</span></button><button type="button">color <span>+</span></button><button type="button">size <span>+</span></button></aside>
+<aside class="filters"><h2>filters</h2>
+<div class="filter-group open">
+<button type="button" data-filter-toggle>fit <span>–</span></button>
+<div class="filter-panel">
+<label><input type="checkbox" data-key="fit" value="soft"/> Soft</label>
+<label><input type="checkbox" data-key="fit" value="support"/> Support</label>
+<label><input type="checkbox" data-key="fit" value="relaxed"/> Relaxed</label>
+</div></div>
+<div class="filter-group">
+<button type="button" data-filter-toggle>color <span>+</span></button>
+<div class="filter-panel">
+<label><input type="checkbox" data-key="color" value="nude"/> Nude</label>
+<label><input type="checkbox" data-key="color" value="black"/> Black</label>
+<label><input type="checkbox" data-key="color" value="blush"/> Blush</label>
+</div></div>
+<div class="filter-group">
+<button type="button" data-filter-toggle>size <span>+</span></button>
+<div class="filter-panel">
+<label><input type="checkbox" data-key="size" value="xs"/> XS</label>
+<label><input type="checkbox" data-key="size" value="s"/> S</label>
+<label><input type="checkbox" data-key="size" value="m"/> M</label>
+<label><input type="checkbox" data-key="size" value="l"/> L</label>
+</div></div>
+</aside>
 <div>
-<div class="grid"><a class="product reveal" href="product-tank.html"><img src="images/p1.jpg" alt="Soft Foundation Tank"/><div class="body"><h3>Soft Foundation Tank</h3><div class="price">$42</div></div></a><a class="product reveal" href="product-set.html"><img src="images/p2.jpg" alt="Everyday Support Set"/><div class="body"><h3>Everyday Support Set</h3><div class="price">$58</div></div></a><a class="product reveal" href="product-brief.html"><img src="images/p3.jpg" alt="Cloud Comfort Brief"/><div class="body"><h3>Cloud Comfort Brief</h3><div class="price">$24</div></div></a><a class="product reveal" href="product-robe.html"><img src="images/p4.jpg" alt="Morning Wrap Robe"/><div class="body"><h3>Morning Wrap Robe</h3><div class="price">$68</div></div></a></div>
+<div class="grid"><a class="product reveal" data-product href="product-tank.html" data-fit="soft support" data-color="nude black" data-size="xs s m l" data-cat="bestsellers essentials new"><img src="images/p1.jpg" alt="Soft Foundation Tank"/><div class="body"><h3>Soft Foundation Tank</h3><div class="price">$42</div></div></a><a class="product reveal" data-product href="product-set.html" data-fit="support" data-color="nude blush" data-size="s m l" data-cat="bestsellers sets"><img src="images/p2.jpg" alt="Everyday Support Set"/><div class="body"><h3>Everyday Support Set</h3><div class="price">$58</div></div></a><a class="product reveal" data-product href="product-brief.html" data-fit="soft relaxed" data-color="black nude" data-size="xs s m l" data-cat="essentials sale"><img src="images/p3.jpg" alt="Cloud Comfort Brief"/><div class="body"><h3>Cloud Comfort Brief</h3><div class="price">$24</div></div></a><a class="product reveal" data-product href="product-robe.html" data-fit="relaxed" data-color="blush" data-size="s m l" data-cat="new bestsellers"><img src="images/p4.jpg" alt="Morning Wrap Robe"/><div class="body"><h3>Morning Wrap Robe</h3><div class="price">$68</div></div></a></div>
+<p class="filter-empty">No products match these filters. <button type="button" class="filter-chip" data-cat="all" style="margin-left:8px">Clear</button></p>
 <div class="section-head reveal" style="margin-top:48px"><h2 style="font-family:Cormorant Garamond,Georgia,serif;font-size:32px;text-transform:lowercase">how nouvel works</h2></div>
 <div class="process reveal">
 <div class="step"><h3>Find your fit</h3><p>Take the 60-second quiz.</p></div>
@@ -38,7 +94,6 @@
 <div><h2 style="font-family:Cormorant Garamond,Georgia,serif;font-size:28px;text-transform:lowercase">restock alerts</h2><p class="muted" style="margin-top:8px">New colors and capsule drops.</p><p class="nl-success" style="display:none;margin-top:8px;color:#9d174d">You're on the list.</p></div>
 <form id="newsletterForm" class="newsletter-form"><input type="email" required placeholder="you@email.com"/><button class="btn" type="submit">Join</button></form>
 </div>
-
 <div class="section-head center reveal" style="margin-top:48px"><h2 style="font-family:Cormorant Garamond,Georgia,serif;font-size:32px;text-transform:lowercase">questions, answered</h2><p class="muted">Fit, shipping, and returns.</p></div>
 <div class="faq reveal">
 <details open><summary>How do returns work?</summary><p>30 days on unworn items with tags. Free return label in the US.</p></details>
